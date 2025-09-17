@@ -48,7 +48,7 @@
                 <li><a href="usuarios.html" class="nav-link"><i class="bi bi-people me-2"></i>Usuarios</a></li>
                 <li><a href="inmuebles.html" class="nav-link"><i class="bi bi-building me-2"></i>Inmuebles</a></li>
                 <li><a href="imagenes.html" class="nav-link"><i class="bi bi-card-image me-2"></i>Imágenes</a></li>
-                <li><a href="ciudades.html" class="nav-link"><i class="bi bi-geo-alt me-2"></i>Ciudades</a></li>
+                <li><a href="{{ route(municipios.index) }}" class="nav-link"><i class="bi bi-geo-alt me-2"></i>Municipios</a></li>
                 <li><a href="tipos.html" class="nav-link"><i class="bi bi-list-ul me-2"></i>Tipos Inmueble</a></li>
                 <li><a href="casas.html" class="nav-link"><i class="bi bi-house-door me-2"></i>Casas</a></li>
                 <li><a href="apartamentos.html" class="nav-link"><i class="bi bi-building-check me-2"></i>Apartamentos</a></li>
