@@ -1,8 +1,8 @@
 @extends('layout.app')
 
-@section('titulo', 'Panel de Administración')
+@section('titulo')
 
-@section('contenido')
+@section('content')
     <div class="container-fluid">
         <div class="row">
             <!-- Card ejemplo -->
