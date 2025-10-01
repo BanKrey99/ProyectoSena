@@ -299,6 +299,7 @@ return [
     */
 
     'menu' => [
+        
         // Navbar items:
         [
             'type' => 'navbar-search',
@@ -310,27 +311,10 @@ return [
             'topnav_right' => true,
         ],
 
-        // Sidebar items:
+        //['header' => 'account_settings'],
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url' => 'admin/settings',
+            'text' => 'Pueblos',
+            'url' => '/municipio/index',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
