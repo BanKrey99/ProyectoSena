@@ -19,7 +19,7 @@ Administrar Localidades
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Código Postal</th>
-                    <th>Accion</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
