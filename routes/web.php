@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\TipoInmuebleController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -23,3 +24,11 @@ Route::post('/tipoInmueble/store', [TipoInmuebleController::class, 'store'])->na
 Route::get('/tipoInmueble/edit/{id}', [TipoInmuebleController::class, 'edit'])->name('tipoInmueble.edit');
 Route::post('/tipoInmueble/update/{id}', [TipoInmuebleController::class, 'update'])->name('tipoInmueble.update');
 Route::post('/tipoInmueble/destroy/{id}', [TipoInmuebleController::class, 'destroy'])->name('tipoInmueble.destroy');
+
+//Rutas de Usuarios 
+Route::get('/usuario/index', [UsuarioController::class, 'index'])->name('usuario.index');
+Route::get('/usuario/create', [UsuarioController::class, 'create'])->name('usuario.create');
+Route::post('/usuario/store', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::get('/usuario/edit/{id}', [UsuarioController::class, 'edit'])->name('usuario.edit');
+Route::post('/usuario/update/{id}', [UsuarioController::class, 'update'])->name('usuario.update');
+Route::post('/usuario/destroy/{id}', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
