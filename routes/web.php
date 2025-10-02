@@ -7,6 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+//Rutas de municipios
 Route::get('/municipio/index', [MunicipioController::class, 'index'])->name('municipios.index');
 Route::get('/municipio/create', [MunicipioController::class, 'create'])->name('municipios.create');
 Route::post('/municipio/store', [MunicipioController::class, 'store'])->name('municipios.store');
