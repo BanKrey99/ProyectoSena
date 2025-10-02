@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email', 45);
             $table->string('telefono', 12);
             $table->enum('tipoUsuario', ['persona', 'inmobiliaria']);
-            $table->string('nombreEmpresa', 50);
+            $table->string('nombreEmpresa', 50)->nullable();
             $table->timestamp('fechaRegistro')->useCurrent();
             $table->timestamps(); // created_at, updated_at
         });
