@@ -315,7 +315,7 @@ return [
         [
             'text' => 'Municipios',
             'url' => '/municipio/index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fa-solid fa-mountain-city',
         ],
         [
             'text' => 'Tipo de inmueble',
@@ -323,9 +323,9 @@ return [
             'icon' => 'fas fa-fw fa-home',
         ],
         [
-            'text' => '...',
-            'url' => '',
-            'icon' => '',
+            'text' => 'Usuarios',
+            'url' => '/usuario/index',
+            'icon' => 'fas fa-fw fa-user',
         ],
         [
             'text' => 'multilevel',
