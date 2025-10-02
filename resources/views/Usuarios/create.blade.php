@@ -29,6 +29,21 @@
                     placeholder="Ej: 3201234567">
             </div>
 
+            <div class="mb-3">
+                <label for="tipoUsuario" class="form-label">Tipo de Usuario</label>
+                <select name="tipoUsuario" id="tipoUsuario" class="form-select" required>
+                    <option value="">Seleccione...</option>
+                    <option value="persona">Persona</option>
+                    <option value="inmobiliaria">Inmobiliaria</option>
+                </select>
+            </div>
+
+            <div class="mb-3" id="empresaContainer" style="display:none;">
+                <label for="nombreEmpresa" class="form-label">Nombre de la Empresa</label>
+                <input type="text" name="nombreEmpresa" id="nombreEmpresa" class="form-control">
+            </div>
+
+
             <div class="d-flex justify-content-end">
                 <a href="{{ route('usuario.index')}}" class="btn btn-secondary me-2">
                     <i class="bi bi-arrow-left"></i> Cancelar
@@ -39,5 +54,26 @@
             </div>
         </form>
     </div>
+
 </div>
+
 @endsection
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tipoUsuario = document.getElementById('tipoUsuario');
+        const empresaContainer = document.getElementById('empresaContainer');
+        const inputEmpresa = document.getElementById('nombreEmpresa');
+
+        tipoUsuario.addEventListener('change', function() {
+            if (this.value === 'inmobiliaria') {
+                empresaContainer.style.display = 'block';
+                inputEmpresa.setAttribute('required', 'required');
+            } else {
+                empresaContainer.style.display = 'none';
+                inputEmpresa.removeAttribute('required');
+                inputEmpresa.value = '';
+            }
+        });
+    });
+</script>

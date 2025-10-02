@@ -20,6 +20,8 @@ Administrar Usuarios
                     <th>Nombre</th>
                     <th>E-mail</th>
                     <td>Telefono</td>
+                    <td>Tipo de Usuario</td>
+                    <td>Nombre de la empresa</td>
                     <td>Fecha de registro</td>
                     <td>Acciones</td>
                 </tr>
@@ -31,6 +33,8 @@ Administrar Usuarios
                     <td>{{$usuario->nombre}}</td>
                     <td>{{$usuario->email}}</td>
                     <td>{{$usuario->telefono}}</td>
+                    <td>{{$usuario->tipoUsuario}}</td>
+                    <td>{{$usuario->nombreEmpresa ?? 'No presenta empresa'}}</td>
                     <td>{{$usuario->fechaRegistro}}</td>
                     <td>
                         <a href="{{ route('usuario.edit', $usuario->id) }}" class="btn btn-warning">Actualizar</a>
