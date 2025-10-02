@@ -30,7 +30,7 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         Usuario::create($request->all());
-        return redirect()->route('usuarios.index')->with('success', 'Usuario registrado correctamente');
+        return redirect()->route('usuario.index')->with('success', 'Usuario registrado correctamente');
     }
 
     /**
@@ -57,7 +57,7 @@ class UsuarioController extends Controller
     {
         $usuario = Usuario::findOrfail($id);
         $usuario->update($request->all());
-        return redirect()->route('usuarios.index')->with('success', 'Usuario actualizado correctamente');
+        return redirect()->route('usuario.index')->with('success', 'Usuario actualizado correctamente');
     }
 
     /**
@@ -67,6 +67,6 @@ class UsuarioController extends Controller
     {
         $usuario = Usuario::findOrfail($id);
         $usuario->delete();
-        return redirect()->route('usuarios.index')->with('success', 'Usuario eliminado correctamente');
+        return redirect()->route('usuario.index')->with('success', 'Usuario eliminado correctamente');
     }
 }
