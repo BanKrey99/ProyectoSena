@@ -313,7 +313,7 @@ return [
 
         //['header' => 'account_settings'],
         [
-            'text' => 'Pueblos',
+            'text' => 'Municipios',
             'url' => '/municipio/index',
             'icon' => 'fas fa-fw fa-user',
         ],
