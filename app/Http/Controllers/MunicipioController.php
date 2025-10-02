@@ -30,7 +30,8 @@ class MunicipioController extends Controller
     public function store(Request $request)
     {
         Municipio::create($request->all());
-        return redirect()->route('municipios.index')->with('success','Municipio Creado exitosamente');
+        return redirect()->route('municipios.index')
+        ->with('success','Municipio Creado exitosamente');
     }
 
     /**
