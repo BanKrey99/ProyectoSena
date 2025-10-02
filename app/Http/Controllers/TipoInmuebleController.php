@@ -30,7 +30,7 @@ class TipoInmuebleController extends Controller
     public function store(Request $request)
     {
         TipoInmueble::create($request->all());
-        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Creado exitosamente');
+        return redirect()->route('tipoInmueble.index')->with('success','Tipo de Inmueble Creado exitosamente');
     }
 
     /**
@@ -44,7 +44,7 @@ class TipoInmuebleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(TipoInmueble $id)
+    public function edit($id)
     {
         $tipoInmueble = TipoInmueble::findOrfail($id);
         return view('TipoInmueble.edit', compact('tipoInmueble'));
@@ -57,16 +57,16 @@ class TipoInmuebleController extends Controller
     {
         $tipoInmueble = TipoInmueble::findOrfail($id);
         $tipoInmueble->update($request->all());
-        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Actualizado exitosamente');
+        return redirect()->route('tipoInmueble.index')->with('success','Tipo de Inmueble Actualizado exitosamente');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(TipoInmueble $id)
+    public function destroy($id)
     {
         $tipoInmueble = TipoInmueble::findOrfail($id);
         $tipoInmueble->delete();
-        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Eliminado exitosamente');
+        return redirect()->route('tipoInmueble.index')->with('success','Tipo de Inmueble Eliminado exitosamente');
     }
 }
