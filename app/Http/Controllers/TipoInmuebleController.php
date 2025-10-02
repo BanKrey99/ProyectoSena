@@ -1,0 +1,72 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\TipoInmueble;
+use Illuminate\Http\Request;
+
+class TipoInmuebleController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     */
+    public function index()
+    {
+        $tipoInmuebles = TipoInmueble::all();
+        return view('TipoInmueble.index', compact('tipoInmuebles'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     */
+    public function create()
+    {
+        return view('TipoInmueble.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     */
+    public function store(Request $request)
+    {
+        TipoInmueble::create($request->all());
+        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Creado exitosamente');
+    }
+
+    /**
+     * Display the specified resource.
+     */
+    public function show(TipoInmueble $tipoInmueble)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(TipoInmueble $id)
+    {
+        $tipoInmueble = TipoInmueble::findOrfail($id);
+        return view('TipoInmueble.edit', compact('tipoInmueble'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     */
+    public function update(Request $request, $id)
+    {
+        $tipoInmueble = TipoInmueble::findOrfail($id);
+        $tipoInmueble->update($request->all());
+        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Actualizado exitosamente');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     */
+    public function destroy(TipoInmueble $id)
+    {
+        $tipoInmueble = TipoInmueble::findOrfail($id);
+        $tipoInmueble->delete();
+        return redirect()->route('TipoInmueble.index')->with('success','Tipo de Inmueble Eliminado exitosamente');
+    }
+}
