@@ -19,7 +19,7 @@
             </div>
 
             <div class="d-flex justify-content-end">
-                <a href="" class="btn btn-secondary me-2">
+                <a href="{{ route('tipoInmueble.index') }}" class="btn btn-secondary me-2">
                     <i class="bi bi-arrow-left"></i> Cancelar
                 </a>
                 <button type="submit" class="btn btn-success">
