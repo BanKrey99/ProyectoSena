@@ -11,7 +11,7 @@ Administrar Localidades
 
 @section('content')
 <div>
-    <a href="" class="btn btn-primary mb-3"> + Crear Localidad </a>
+    <a href="{{ route('municipios.create') }}" class="btn btn-primary mb-3"> + Crear Localidad </a>
     <div>
         <table class="table table-bordered text-center align-middle table-hover">
             <thead class="table-dark">
@@ -27,12 +27,11 @@ Administrar Localidades
                 <tr>
                     <td>{{$municipio->id}}</td>
                     <td>{{$municipio->nombre}}</td>
-                    <td>{{$municipios->codigoPostal}}</td>
+                    <td>{{$municipio->codigoPostal}}</td>
                     <td>
-                        <a href="" class="btn btn-warning">Actualizar</a>
-                        <form action="" method="POST" style="display:inline;">
+                        <a href="{{ route('municipios.edit', $municipio->id) }}" class="btn btn-warning">Actualizar</a>
+                        <form action="{{ route('municipios.destroy', $municipio->id) }}" method="POST" style="display:inline;">
                             @csrf
-                            @method('DELETE')
                             <button type="submit" class="btn btn-danger" onclick="confirmarEliminacion(event)">Eliminar</button>
                         </form>
                     </td>
