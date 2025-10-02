@@ -318,9 +318,14 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'Tipo de inmueble',
+            'url' => '/tipoInmueble/index',
+            'icon' => 'fas fa-fw fa-home',
+        ],
+        [
+            'text' => '...',
+            'url' => '',
+            'icon' => '',
         ],
         [
             'text' => 'multilevel',
