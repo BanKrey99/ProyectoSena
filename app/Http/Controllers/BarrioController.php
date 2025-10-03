@@ -13,7 +13,7 @@ class BarrioController extends Controller
     public function index()
     {
         $barrios = Barrio::all();
-        return view('Barrios.idex', compact('barrios'));
+        return view('Barrios.index', compact('barrios'));
     }
 
     /**
