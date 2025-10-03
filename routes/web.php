@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BarrioController;
 use App\Http\Controllers\MunicipioController;
 use App\Http\Controllers\TipoInmuebleController;
 use App\Http\Controllers\UsuarioController;
@@ -32,3 +33,11 @@ Route::post('/usuario/store', [UsuarioController::class, 'store'])->name('usuari
 Route::get('/usuario/edit/{id}', [UsuarioController::class, 'edit'])->name('usuario.edit');
 Route::post('/usuario/update/{id}', [UsuarioController::class, 'update'])->name('usuario.update');
 Route::post('/usuario/destroy/{id}', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
+
+//Rutas para Barrios
+Route::get('/barrio/index', [BarrioController::class, 'index'])->name('barrios.index');
+Route::get('/barrio/create', [BarrioController::class, 'create'])->name('barrios.create');
+Route::post('/barrio/store', [BarrioController::class, 'store'])->name('barrios.store');
+Route::get('/barrio/edit/{id}', [BarrioController::class, 'edit'])->name('barrios.edit');
+Route::post('/barrio/update/{id}', [BarrioController::class, 'update'])->name('barrios.update');
+Route::post('/barrio/destroy/{id}', [BarrioController::class, 'destroy'])->name('barrios.destroy');
