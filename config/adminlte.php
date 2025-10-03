@@ -328,6 +328,12 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
         [
+            
+            'text' => 'Barrios',
+            'url' => '/barrio/index',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        [
             'text' => 'multilevel',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
