@@ -12,4 +12,9 @@ class Municipio extends Model
         'nombre',
         'codigoPostal'
     ];
+
+    public function Barrio()
+    {
+        return $this->hasMany(Barrio::class);
+    }
 }
