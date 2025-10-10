@@ -17,6 +17,19 @@
                     value="{{ $barrio->nombre }}" required>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label">Municipio</label>
+                <select name="idMunicipio" class="form-select" required>
+                    <option value="">Seleccione...</option>
+                    @foreach($municipios as $municipio) 
+                    <option value="{{$municipio->id}}"
+                        {{ $barrio->idMunicipio == $municipio->id ? 'selected' : '' }}>
+                        {{$municipio->nombre}}
+                    </option>
+                    @endforeach
+                </select>
+            </div>
+
             <div class="d-flex justify-content-end">
                 <a href="{{ route('barrios.index')}}" class="btn btn-secondary me-2">
                     <i class="bi bi-arrow-left"></i> Cancelar

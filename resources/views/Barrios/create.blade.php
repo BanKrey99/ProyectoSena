@@ -17,6 +17,16 @@
                     placeholder="Ej: Chapinero" required>
             </div>
 
+            <div class="mb-3">
+                <label class="form-label">Municipio</label>
+                <select class="form-select" name="idMunicipio" id="idMunicipio">
+                    <option value="">Seleccione...</option>
+                    @foreach($municipios as $municipio)
+                        <option value="{{ $municipio->id }}">{{ $municipio->nombre }}</option>
+                    @endforeach
+                </select>
+            </div>
+
             <div class="d-flex justify-content-end">
                 <a href="{{ route('barrios.index')}}" class="btn btn-secondary me-2">
                     <i class="bi bi-arrow-left"></i> Cancelar

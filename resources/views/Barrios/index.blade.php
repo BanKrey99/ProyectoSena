@@ -18,6 +18,7 @@ Administrar Barrios
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
+                    <th>Municipio</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -26,6 +27,7 @@ Administrar Barrios
                 <tr>
                     <td>{{$barrio->id}}</td>
                     <td>{{$barrio->nombre}}</td>
+                    <td>{{$barrio->municipios->nombre}}</td>
                     <td>
                         <a href="{{ route('barrios.edit', $barrio->id) }}" class="btn btn-warning">Actualizar</a>
                         <form action="{{ route('barrios.destroy', $barrio->id) }}" method="POST" style="display:inline;">
