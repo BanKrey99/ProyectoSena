@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Barrio;
+use App\Models\Municipio;
 use Illuminate\Http\Request;
 
 class BarrioController extends Controller
@@ -21,7 +22,8 @@ class BarrioController extends Controller
      */
     public function create()
     {
-        return view('Barrios.create');
+        $municipios = Municipio::all();
+        return view('Barrios.create', compact('municipios'));
     }
 
     /**
@@ -48,7 +50,8 @@ class BarrioController extends Controller
     public function edit($id)
     {
         $barrio = Barrio::findOrfail($id);
-        return view('Barrios.edit', compact('barrio'));
+        $municipios = Municipio::all();
+        return view('Barrios.edit', compact('barrio','municipios'));
     }
 
     /**
